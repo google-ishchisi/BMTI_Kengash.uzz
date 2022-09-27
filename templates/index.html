@@ -1,0 +1,392 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ 
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+	<div class="hero-container">
+		<div id="heroCarousel" data-bs-interval="7000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+			{% for i in carusel %}
+			<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+			<div class="carousel-inner" role="listbox">
+				<!-- Slide 1 -->
+				<div class="carousel-item active" style="background-image: url({{ i.img }});">
+					<div class="carousel-container">
+						<div class="carousel-content">
+							<h2 class="animate__animated animate__fadeInDown">{{ i.title }}</h2>
+							<p class="animate__animated animate__fadeInUp">{{ i.body }}</p>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+			</a>
+
+			<a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+				<span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section><!-- End Hero -->
+
+
+<main id="main hoc container clear">
+
+	<!-- ======= About Section ======= -->
+	<section id="about" class="about ms-2">
+		<div class="container">
+
+			<div class="row no-gutters">
+				<div class="align-center col-xl-12 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
+					<div class="content d-flex flex-column justify-content-center">
+						<h3>Buxoro Muhandislik-Texnologiya instituti</h3>
+						<p>
+							Buxoro muhandislik-texnologiya institut O'zbekiston Respiblikasi Prezdentining 2013-yil 15-apreldagi "Buxoro muhandislik-texnologiya institutini tashkil qilish to'g'risida"gi PQ-1954-sonli qarori asosida Buxoro yuqori texnologiyalar muhandislik-texnika instituti negizida qayta tashkil qilingan bo'lib, O'zbekiston Respublikasi Oliy va o'rta maxsus ta'lim vazirligining tashkiliy tuzilmasiga kiradi.
+						</p>
+						<br><hr>
+						<h3>Buxoro Muhandislik-Texnologiya instituti Talabalar kengashi</h3>
+						<h4 style="color: green;">
+							Talabalarning haq-huquqlarini himoya qilish va ularning g'oyalarini har tomonlama qo'llab-quvvatlash - Oliy maqsadimiz.
+						</h4>
+						
+					</div><!-- End .content-->
+				</div>
+			</div>
+
+		</div>
+	</section><!-- End About Section -->
+
+	<!-- ======= Counts Section ======= -->
+	<section id="counts" class="counts">
+		<div class="container">
+
+			<div class="row no-gutters">
+
+				<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+					<div class="count-box">
+						<i class="bi bi-emoji-smile"></i>
+						<span data-purecounter-start="0" data-purecounter-end="11266" data-purecounter-duration="1"
+							  class="purecounter"></span>
+						<p><strong>Talabalarimiz</strong> turli yonalishlarda tahsil olmoqda</p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+					<div class="count-box">
+						<i class="bi bi-journal-richtext"></i>
+						<span data-purecounter-start="0" data-purecounter-end="456" data-purecounter-duration="1"
+							  class="purecounter"></span>
+						<p><strong>Professorlarimiz</strong> talabalarga talim bermoqdalar</p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+					<div class="count-box">
+						<i class="bi bi-people"></i>
+						<span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
+							  class="purecounter"></span>
+						<p><strong>Fakultetlarimiz</strong>lar ta'lim bermoqda</p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+					<div class="count-box">
+						<i class="bi bi-headset"></i>
+						<span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
+							  class="purecounter"></span>
+						<p><strong>Kafedralarimiz</strong> oz faoliyatini olibormoqda</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section><!-- End Counts Section -->
+
+	<!-- ======= Services Section ======= -->
+	<section id="services" class="services">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>Fakultetlarimiz</h2>
+				<h4>Bizning institutimizda 8 ta fakultet mavjud.</h4>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4 col-md-6 icon-box">
+					<div class="icon"><i class="bi bi-briefcase"></i></div>
+					<h4 class="title"><a href="">Kimyoviy va oziq-ovqat texnologiyalari fakulteti </a></h4>
+				
+				</div>
+				<div class="col-lg-4 col-md-6 icon-box">
+					<div class="icon"><i class="bi bi-card-checklist"></i></div>
+					<h4 class="title"><a href="">Neft-gaz texnologiyasi fakulteti</a></h4>
+					
+				</div>
+				<div class="col-lg-4 col-md-6 icon-box">
+					<div class="icon"><i class="bi bi-bar-chart"></i></div>
+					<h4 class="title"><a href="">Paxta va yengil sanoat texnologiyalari fakulteti</a></h4>
+				
+				</div>
+				<div class="col-lg-4 col-md-6 icon-box">
+					<div class="icon"><i class="bi bi-binoculars"></i></div>
+					<h4 class="title"><a href="">To'qimachilik va charm sanoat fakulteti</a></h4>
+					
+				</div>
+				<div class="col-lg-4 col-md-6 icon-box">
+					<div class="icon"><i class="bi bi-brightness-high"></i></div>
+					<h4 class="title"><a href="">Arxitektura-qurilish fakulteti</a></h4>
+					<!-- <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+						praesentium voluptatum deleniti atque</p> -->
+				</div>
+				<div class="col-lg-4 col-md-6 icon-box">
+					<div class="icon"><i class="bi bi-calendar4-week"></i></div>
+					<h4 class="title"><a href="">Energetika fakulteti</a></h4>
+					<!-- <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
+						cum soluta nobis est eligendi</p> -->
+				</div>
+				<div class="col-lg-4 col-md-6 icon-box">
+					<div class="icon"><i class="bi bi-calendar4-week"></i></div>
+					<h4 class="title"><a href="">Texnologik jarayonlarni boshqaruv tizimlari fakulteti</a></h4>
+					<!-- <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
+						cum soluta nobis est eligendi</p> -->
+				</div>
+				<div class="col-lg-4 col-md-6 icon-box">
+					<div class="icon"><i class="bi bi-calendar4-week"></i></div>
+					<h4 class="title"><a href="">Yer usti transporti tizimlari fakulteti</a></h4>
+					<!-- <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
+						cum soluta nobis est eligendi</p> -->
+				</div>
+				
+			</div>
+
+		</div>
+	</section><!-- End Services Section -->
+
+
+	<!-- ======= Team Section ======= -->
+	<section id="team" class="team">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>Kengash rahbariyati</h2>
+				<h4>BMTI "Talabalar kengashi"ga institutda rasmiy ravishda ta'lim olayotgan barcha talabalar a'zodirlar.</h4>
+			</div>
+
+			<div class="row">
+				{% for i in azo %}
+				<div class="col-xl-3 col-lg-4 col-md-6">
+					<div class="member">
+						<img src="{{ i.img }}" class="img-fluid" alt="">
+						<div class="member-info">
+							<div class="member-info-content">
+								<h4>{{ i.name }}</h4>
+								<span>{{i.text}}</span>
+								<div class="social">
+									<a href=""><i class="bi bi-twitter"></i></a>
+									<a href=""><i class="bi bi-whatsapp"></i></a>
+									<a href=""><i class="bi bi-instagram"></i></a>
+									<a href=""><i class="bi bi-telegram"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+		</div>
+	</section><!-- End Team Section -->
+
+
+	<!-- ======= Savol Asked Questions Section ======= -->
+	<section id="faq" class="faq section-bg">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>Ko'pchilik so'raydigan savollar</h2>
+				<h4 style="color: red;">Balki sizni qiziqtiradigan savolning javobi shu yerdadir !!!</h4>
+			</div>
+
+			<div class="faq-list">
+				<ul>
+					<li data-aos="fade-up">
+						<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">
+							Talabalar kengashi talabalar uchun nega kerak ?
+						</i><i
+								class="bx bx-chevron-up icon-close"></i></a>
+						<div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+							<p>
+								Talabalar Kengashi – institutdagi barcha talabalarni birlashtiradigan, ularning faoliyati bo’yicha uslubiy metodik yordam berishga, ularni qo’llab quvvatlashga va qolgan barcha masalalarda qo’llab-quvvatlashga qaratilgan tuzilma.
+							</p>
+						</div>
+					</li>
+
+					<li data-aos="fade-up" data-aos-delay="100">
+						<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Kengash raisi kim va chet elda ham bunday masuliyatli rahbar talaba kim deb yuritiladi ?<i class="bx bx-chevron-down icon-show"></i><i
+								class="bx bx-chevron-up icon-close"></i></a>
+						<div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+							<p>
+								Talabalar kengashi raisi: G'afforov Jasurbek Kamolovich. Institutning "To'qimachilik va charm sanoat" fakulteti 3 - kurs talabasi. Chet elning nufuzli oliygohlarida bu lavozim "Talabalar prezidenti" deb yuritiladi.
+							</p>
+						</div>
+					</li>
+
+					<li data-aos="fade-up" data-aos-delay="200">
+						<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Kengash maqsadini to'liqroq tushuntira olasizmi ?<i class="bx bx-chevron-down icon-show"></i><i
+								class="bx bx-chevron-up icon-close"></i></a>
+						<div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+							<p>
+								Kengashni tuzishdan maqsad – institut taalabalarining intelektual salohiyati va boshqa barcha imkoniyatlarini O’zbekiston Respublikasining “Ta’lim to’g’risidagi” gi qonuni va O’zbekiston Respublikasi Vazirlar Mahkamasining “Oliy ta’lim muassasalarida ta’lim jarayonini tashkil etish bilan bog’liq tizimni takomillashtirish chora-tadbirlari to’g’risida” 2020-yil 31-dekabrdagi qarorlarida belgilangan vazifalarning bajarilishini ta’minlash, oliy ta’limning davlat ta`lim standarti talablari darajasida mukammal bilim, malaka, ko’nikmalarga ega bo’lgan professional mutaxasislar tayyorlashga yo’naltirishdan iborat. Iqtidorli, ijodkor talabalarni aniqlash, talabalarning qiziqish va fikrlash, tasavvur olamini oshirish,  iqtidorli talabalarga imkoniyatlar eshigini ochish va boshqalarni ham ularga ergashtirish, shuningdek, talabalar bilan samarali ijodiy va professional aloqalarni o‘rnatish va shunday ishlarni ommalashtirish, ularni doimo qo’llab quvvatlab,  rag’batlantirib turish.	
+							</p>
+						</div>
+					</li>
+
+					<li data-aos="fade-up" data-aos-delay="300">
+						<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+																	   data-bs-target="#faq-list-4" class="collapsed">Institutimizda Kengashni kimlar tashkil etdi?<i
+								class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+						<div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+							<p>
+								Talabalar kengashi raisi J.K. G'afforov tashabbusi bilan O‘zbekiston Respublikasi oliy va o‘rta  maxsus ta’lim vazirligi (Buxoro muhandislik-texnologiya instituti) rektori N.R. Barakayev tashkil etdi.
+							</p>
+						</div>
+					</li>
+
+					<li data-aos="fade-up" data-aos-delay="400">
+						<i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+																	   data-bs-target="#faq-list-5" class="collapsed">Talabalar kengashi nizomi qachon tasdiqlandi?<i
+								class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+						<div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+							<p>
+								Talabalar kengashi nizomi 25.11.2021 da tasdiqlandi.
+							</p>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+
+		</div>
+	</section><!-- End Frequently Asked Questions Section -->
+
+
+	<!-- ===================== Blog ========================   -->
+
+	<div class="container">
+
+		<div class="section-title">
+			<h2 class="mt-4">Instutimizdan yangiliklari</h2>
+			<p>Rahbar va bo'lajak rahbarlar, boshqalardan ko'pincha birgina farq bilan ajralib turishadi. Bu ham bo'lsa, eng so'ngi yangiliklardan birinchi bo'lib xabardor bo'lishdir !!! Jasurbek Kamolovich</p>
+		</div>
+
+		<div class="row portfolio-container">
+
+			{% for i in post %}
+			<div class=" col-lg-4 col-md-6 portfolio-item filter-app mt-3">
+				<div class="portfolio-wrap ">
+					<a href="{% url 'detail' i.id %}"><img src="{{ i.img }}" class="img-fluid" alt="^_^"></a>
+					<div class="portfolio-info mt-3">
+						<h5>{{ i.title }}</h5><br>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div> 
+			<div>
+				<nav class="card-footer" aria-label="Page navigation example">
+					<ul class="pagination">
+						{% if post.has_previous %}
+						<li class="page-item">
+							<a class="page-link" href="?page={{ post.previous_number }}" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						{% else %}
+						<li class="page-item">
+							<a class="page-link" href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						{% endif %}
+
+						{% for i in nums %}
+
+						{% if forloop.counter == post.number %}
+						<li class="page-item active"><a class="page-link" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+						{% else %}
+						<li class="page-item"><a class="page-link" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+						{% endif %}
+
+						{% endfor %}
+						{% if post.has_next %}
+						<li class="page-item">
+							<a class="page-link" href="?page={{ post.next_page_number }}" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+						{% else %}
+						<li class="page-item">
+							<a class="page-link" href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+						{% endif %}
+					</ul>
+				</nav>
+			</div>
+		
+	</div>
+
+	<!-- ======= Contact Section ======= -->
+	<section id="contact" class="contact">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>Aloqa</h2>
+				<h3 style="color: red;">Talabalar kengashi raisiga institutning har bir talabasi bemalol, 24/7 vaqt davomiyligida murojaat etishi mumkin.</h3>
+			</div>
+
+			<div class="row contact-info">
+
+				<div class="col-md-4">
+					<div class="contact-address">
+						<i class="bi bi-geo-alt"></i>
+						<h3>Manzil</h3>
+						<address>Index 200100, Buxoro viloyati Buxoro shahri, Q.Murtazoyev ko'chasi 15-uy 2-bino majlislar zali o'ng tomonidagi xona</address>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="contact-phone">
+						<i class="bi bi-phone"></i>
+						<h3>Telefon raqam</h3>
+						<p><a href="tel:+155895548855">+99891-416-25-82</a></p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="contact-email">
+						<i class="bi bi-envelope"></i>
+						<h3>Elektron pochta</h3>
+						<p><a href="mailto:info@example.com">jasurbekkamolovich2582@gmail.com</a></p>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</section><!-- End Contact Section -->
+
+
+</main>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'header.html' %}
+<!-- {% load socialaccount %} -->
+{% get_providers as socialaccount_providers %}
+{% load account %}
+{% block content %}
+<br><br><br><br><br>
+<div class="container">
+    <form action="" method="post">
+        <h1>Registratsiya</h1><br>
+        {% csrf_token %}
+        <input type="text" class="form-control" name="username" placeholder="Login-->"><br>
+        <input type="text" class="form-control" name="ism" placeholder="Ismingiz-->"><br>
+        <input type="text" class="form-control" name="firstname" placeholder="Familya-->"><br>
+        <input type="password" class="form-control" name="parol1" placeholder="Parol-->"><br>
+        <input type="password" class="form-control" name="parol2" placeholder="Parol takroran-->"><br>
+
+        <input type="submit" class="btn btn-success" value="Saqlash"><hr> 
+    </form>
+
+    <a class="btn btn-info" href="{% url 'login' %}">Login</a>--- Royhatdan otgan bolsangiz<br>
+    <a class="" href="{% provider_login_url 'google' %}">Google</a>
+
+
+</div>
+
+<br>
+{% endblock %}

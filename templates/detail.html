@@ -1,0 +1,104 @@
+{% extends 'header.html' %}
+{% load static %}
+{% load social_share %}
+
+{% block content %}
+  <main id="main">
+
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-10 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img my-5">
+                <img src="{{p.img}}" alt="aaaa" class="img-fluid">
+              </div>
+
+              <h5 class="entry-title">{{ p.title }}</h5>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> {{ p.author }}</li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> {{ p.data }}</li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> {{ p.comments.count }} Comments</li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+
+                <p>
+				{{ p.text | safe }}<hr>
+        <h4>Postni ulashmoqchimisiz?</h4>
+        <div style="border: 1px solid ;" class="btn btn-info">
+          
+          <!-- <a class="btn btn-info" href="#">{% post_to_telegram "Yangi post: {{ p.title }}<br> {{ p.text|safe }}" object_or_url  'Telegram' %}</a> -->
+          {% post_to_telegram "Yangi post: {{ p.title }} {{ p.img.url }}" object_or_url  'Telegram' %}
+        </div>
+        
+				</p><hr>
+      </div>
+			  </div><br>
+
+
+            </article><!-- End blog entry -->
+
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">{{ p.comments.count }} ta izoh</h4>
+              {% for i in p.comments.all %}
+              <div id="comment-1" class="comment card text-center">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="assets/img/blog/comments-1.jpg" alt=""></div>
+                  <div class="card-body">
+                    <h5><a href="">{{ i.name.username }}</a></h5>
+                    <hr>
+                    <p class="text-success">
+                      {{ i.izoh }}
+                    </p>
+                    <hr>
+                    <time datetime="2020-01-01">{{ i.data }}</time>
+                  </div>
+                </div>
+              </div><!-- End comment #1 -->
+              <br>
+              {% endfor %}
+              
+              {% if not user.is_authenticated %}
+                <h3>Siz ham comment yozmoqchi bolsangiz royhatdan oting yoki tizimga kiring</h3>
+                <a class="btn btn-warning" href="{% url 'register' %}">Register/Login</a>
+              {% else %}
+                <form method="post">
+                 {% csrf_token %}
+                  <div class="row">
+                    <div class="col form-group">
+                      <h3>Izoh qoldirish</h3><br>
+                      {{form.as_p}}
+                      <!-- <input name="website" type="text" class="form-control" placeholder="Sizning ham izoh qoldiring !"><br> -->
+                    </div>
+                  </div>                  
+                  <button type="submit" class="btn btn-primary">Yuborish</button>
+                </form>
+              
+              {% endif %}
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+
+        </div>
+
+      
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+{%  endblock %}
